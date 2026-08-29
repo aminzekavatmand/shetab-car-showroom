@@ -362,7 +362,7 @@ footer{background:#05070a;border-top:1px solid var(--line);padding:64px 0 30px}
   .hero-ring{width:180px;height:180px}
   .hero-ring::before{inset:14px}
   .hero-ring::after{inset:30px}
-  .gallery_logo{width:min(220px,70vw)}
+  .gallery_logo{width:min(220px,70vw);filter:drop-shadow(0 0 25px rgba(255,176,32,.3)) drop-shadow(0 0 50px rgba(255,122,26,.15))}
   .nav{height:56px}
   .nav-links{top:56px}
   .hero{padding:80px 0 50px}
@@ -379,4 +379,5 @@ footer{background:#05070a;border-top:1px solid var(--line);padding:64px 0 30px}
   .hero-ring{width:360px;height:360px}
   .chip.top{right:2%}.chip.bot{left:2%}
 }
-.gallery_logo{width:min(300px,80vw);height:auto;aspect-ratio:1;object-fit:contain;margin:auto;border:none;filter:drop-shadow(0 20px 40px rgba(255,122,26,.25))}
+.gallery_logo{width:min(300px,80vw);height:auto;aspect-ratio:1;object-fit:contain;border-radius: 40px; margin:auto;border:none;
+  mix-blend-mode:screen;filter:drop-shadow(0 0 40px rgba(255,176,32,.35)) drop-shadow(0 0 80px rgba(255,122,26,.2))}
