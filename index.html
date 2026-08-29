@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شتاب | نمایشگاه اتومبیل</title>
+<meta name="description" content="نمایشگاه اتومبیل شتاب؛ نمایش خودروهای صفر و کارکرده با مشخصات کامل، کارشناسی توسط متخصصان و استعلام قیمت رایگان با تماس مستقیم با کارشناسان.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb020"/><stop offset="1" stop-color="#ff5e1f"/>
+    </linearGradient>
+    <radialGradient id="wheel" cx=".4" cy=".4" r=".9">
+      <stop offset="0" stop-color="#2b3642"/><stop offset="1" stop-color="#0c1116"/>
+    </radialGradient>
+
+    <g id="wheeli">
+      <circle r="13" fill="url(#wheel)" stroke="#0a0e13" stroke-width="2"/>
+      <circle r="4.4" fill="none" stroke="#ffb020" stroke-width="1.6"/>
+      <circle r="1.6" fill="#ffb020"/>
+      <path d="M0 -11 L0 11 M-11 0 L11 0 M-7.8 -7.8 L7.8 7.8 M7.8 -7.8 L-7.8 7.8" stroke="#ffb020" stroke-width=".9" opacity=".7"/>
+    </g>
+
+    <!-- sport -->
+    <g id="car-sport">
+      <ellipse cx="220" cy="141" rx="205" ry="9" fill="rgba(0,0,0,.5)"/>
+      <path d="M24 132 L38 112 C46 98 66 84 96 76 L150 70 L185 67 L214 67 C252 66 290 74 320 92 L340 105 L368 115 L398 121 C412 124 418 130 415 136 L410 141 L32 141 C24 141 20 136 24 132 Z" fill="url(#gradA)"/>
+      <path d="M178 69 L206 68 L222 69 C234 74 240 81 243 88 L156 88 C160 79 168 72 178 69 Z" fill="#121c26" opacity=".95"/>
+      <path d="M26 132 L38 113" stroke="url(#gradB)" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <path d="M120 76 L96 79" stroke="url(#gradB)" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M300 92 L322 108 L356 116" stroke="rgba(255,176,32,.35)" stroke-width="2" fill="none"/>
+      <use href="#wheeli" transform="translate(106,130) scale(1.9)"/>
+      <use href="#wheeli" transform="translate(336,130) scale(1.9)"/>
+    </g>
+
+    <!-- sedan -->
+    <g id="car-sedan">
+      <ellipse cx="220" cy="141" rx="205" ry="9" fill="rgba(0,0,0,.5)"/>
+      <path d="M18 136 L32 118 L70 100 L122 88 L172 84 L206 84 L254 84 L302 96 L352 112 L390 124 C404 127 411 132 409 138 L407 142 L24 142 C16 142 13 137 18 136 Z" fill="url(#gradA)"/>
+      <path d="M178 86 L208 86 L252 86 L278 95 L160 95 C162 89 168 86 178 86 Z" fill="#121c26" opacity=".95"/>
+      <path d="M20 136 L34 120" stroke="url(#gradB)" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <path d="M130 90 L110 94 L96 100" stroke="rgba(255,176,32,.3)" stroke-width="2" fill="none"/>
+      <use href="#wheeli" transform="translate(108,132) scale(1.9)"/>
+      <use href="#wheeli" transform="translate(334,132) scale(1.9)"/>
+    </g>
+
+    <!-- suv -->
+    <g id="car-suv">
+      <ellipse cx="220" cy="143" rx="210" ry="9" fill="rgba(0,0,0,.5)"/>
+      <path d="M14 140 L26 118 L58 94 L102 78 L158 74 L210 72 L264 74 L314 88 L358 106 L394 120 C407 124 413 131 410 138 L408 142 L20 142 C12 142 10 140 14 140 Z" fill="url(#gradA)"/>
+      <path d="M170 76 L212 74 L262 78 L288 90 L158 90 C160 82 163 77 170 76 Z" fill="#121c26" opacity=".95"/>
+      <path d="M16 140 L28 120" stroke="url(#gradB)" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <path d="M108 80 L130 90 L160 94 L300 100" stroke="rgba(255,176,32,.32)" stroke-width="2" fill="none"/>
+      <use href="#wheeli" transform="translate(108,134) scale(1.9)"/>
+      <use href="#wheeli" transform="translate(334,134) scale(1.9)"/>
+    </g>
+
+    <!-- classic -->
+    <g id="car-classic">
+      <ellipse cx="220" cy="142" rx="205" ry="9" fill="rgba(0,0,0,.5)"/>
+      <path d="M22 138 C18 122 32 108 58 98 L94 82 L140 78 L192 80 L244 90 L302 106 L352 120 L386 128 C402 131 410 136 408 142 L30 142 C24 142 25 140 22 138 Z" fill="url(#gradA)"/>
+      <path d="M166 82 L198 82 L238 86 L260 94 L158 94 C160 87 162 83 166 82 Z" fill="#121c26" opacity=".95"/>
+      <path d="M24 138 L38 122" stroke="url(#gradB)" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <path d="M96 86 L120 90 L148 96" stroke="rgba(255,176,32,.3)" stroke-width="2" fill="none"/>
+      <use href="#wheeli" transform="translate(110,133) scale(1.9)"/>
+      <use href="#wheeli" transform="translate(332,133) scale(1.9)"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- header -->
+<header id="header">
+  <div class="container nav">
+    <a href="#top" class="logo">
+      <span class="badge"><span class="fa">ش</span></span>
+      <span>شتاب<small>نمایشگاه اتومبیل</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top" class="active">خانه</a></li>
+      <li><a href="#showroom">نمایشگاه</a></li>
+      <li><a href="#experts">کارشناسان</a></li>
+      <li><a href="#why">چرا شتاب</a></li>
+      <li><a href="#contact">تماس</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#showroom" class="btn btn-primary"><span>مشاهده خودروها</span></a>
+      <button class="burger" id="burger" aria-label="منو">
+        <img src="images/logo.png" alt="logo">
+        <!-- <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h10"/></svg> -->
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="speed-lines" id="speedLines" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <span class="eyebrow"><span class="dot"></span>نمایشگاه تخصصی خودروهای صفر و کارکرده</span>
+      <h1>سرعتِ انتخاب را<br>با <span class="stroke">شتاب</span> <span class="grad">تجربه کنید</span></h1>
+      <p class="sub">در شتاب، خودروی رویاهایتان را با مشخصات کامل و دقیق ببینید، کارشناسی تخصصی بگیرید و برای استعلام قیمتِ لحظه‌ای، مستقیم با کارشناسان ما تماس بگیرید.</p>
+      <div class="hero-ctas">
+        <a href="#showroom" class="btn btn-primary">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 8l7.5-4 9 5.5L3 14l9 5.5L21 13.5"/><path d="M3 8l9 6 9-6M12 14v6"/></svg>
+          مشاهده نمایشگاه
+        </a>
+        <a href="#experts" class="btn btn-ghost">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 6v6l4 2M12 3a9 9 0 100 18 9 9 0 000-18z"/></svg>
+          گفتگو با کارشناس
+        </a>
+      </div>
+      <p class="hero-note">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6 2A8.6 8.6 0 1111 3.4 8.6 8.6 0 0119.6 12z"/></svg>
+        استعلام قیمت رایگان و بدون هیچ تعهدی برای خرید
+      </p>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="hero-ring"></div>
+      <img src="images/logo.png" alt="logo" class="gallery_logo">
+      <!-- <svg class="hero-car" viewBox="0 0 440 170" role="img" aria-label="خودروی اسپرت شتاب">
+        <defs>
+          <linearGradient id="gradA" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffcf5c"/><stop offset=".45" stop-color="#ff9a2e"/><stop offset="1" stop-color="#c93a10"/>
+          </linearGradient>
+          <linearGradient id="gradB" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#ffb020"/><stop offset="1" stop-color="#fff3d6"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="220" cy="141" rx="205" ry="10" fill="rgba(0,0,0,.55)"/>
+        <path d="M16 130 L34 106 C48 88 76 74 108 66 L164 60 L198 57 L228 57 C272 56 312 66 344 88 L364 104 L390 114 L414 120 C424 123 428 129 425 135 L421 141 L28 141 C18 141 13 136 16 130 Z" fill="url(#gradA)"/>
+        <path d="M168 60 L202 58 L222 59 C236 64 242 72 246 80 L146 80 C152 69 158 62 168 60 Z" fill="#0e1520" opacity=".96"/>
+        <path d="M150 80 L248 80 L300 94" stroke="rgba(255,255,255,.35)" stroke-width="2.6" fill="none" opacity=".7"/>
+        <path d="M16 130 L32 108" stroke="#ffe08a" stroke-width="4.4" fill="none" stroke-linecap="round"/>
+        <path d="M108 66 L86 70 L70 78" stroke="#ffe08a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+        <use href="#wheeli" transform="translate(106,128) scale(2.05)"/>
+        <use href="#wheeli" transform="translate(338,128) scale(2.05)"/>
+        <path d="M150 60 L246 60 L352 116" stroke="rgba(255,176,32,.45)" stroke-width="2" fill="none" stroke-dasharray="3 7"/>
+      </svg> -->
+      <!-- <div class="chip top">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        <span>۰ تا ۱۰۰<br><b>۳.۱ ثانیه</b></span>
+      </div> -->
+      <div class="chip bot">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 2v20M17 7l-5-5-5 5"/></svg>
+        <span>بازدید حضوری<br><b>رایگان</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- stats -->
+<div class="container stats">
+  <div class="stats-card reveal">
+    <div class="stat"><b>+۲۵</b><span>سال تجربه درخشان</span></div>
+    <div class="stat"><b>+۱٬۲۰۰</b><span>خودروی عرضه‌شده</span></div>
+    <div class="stat"><b>+۸٬۰۰۰</b><span>مشتری راضی</span></div>
+    <div class="stat"><b>۹۸٪</b><span>رضایت خریداران</span></div>
+  </div>
+</div>
+
+<!-- ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker">
+    <span>S H A T A B</span>
+    <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><em>شتاب</em></span>
+    <span>F A S T &nbsp; F O R W A R D</span>
+    <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><em>نمایشگاه اتومبیل</em></span>
+    <span>SPEED &nbsp; &amp; &nbsp; STYLE</span>
+    <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><em>شتاب</em></span>
+    <span>S H A T A B</span>
+    <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><em>شتاب</em></span>
+    <span>F A S T &nbsp; F O R W A R D</span>
+    <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><em>نمایشگاه اتومبیل</em></span>
+    <span>SPEED &nbsp; &amp; &nbsp; STYLE</span>
+    <span><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><em>شتاب</em></span>
+  </div>
+</div>
+
+<!-- showroom -->
+<section id="showroom">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-tag">Showroom</span>
+        <h2>نمایشگاه خودروهای <span class="grad">شتاب</span></h2>
+      </div>
+      <p>هر خودرو با جزئیات کامل فنی معرفی شده است. برای اطلاع از قیمت روز، روی دکمه «استعلام قیمت» بزنید تا مستقیم با کارشناس مربوطه گفتگو کنید.</p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step"><span class="step-num">۱</span><div><b>خودرو را ببینید</b><p>در نمایشگاه بگردید و مشخصات کامل هر خودرو را بررسی کنید.</p></div></div>
+      <div class="step"><span class="step-num">۲</span><div><b>مقایسه و انتخاب کنید</b><p>بر اساس نیاز و بودجه‌تان، گزینه مناسب را انتخاب کنید.</p></div></div>
+      <div class="step"><span class="step-num">۳</span><div><b>استعلام قیمت بگیرید</b><p>با یک تماس، قیمت روز و شرایط خرید را از کارشناس بشنوید.</p></div></div>
+    </div>
+
+    <div class="filters reveal" id="filters">
+      <button class="f-btn on" data-filter="all">همه</button>
+      <button class="f-btn" data-filter="sport">اسپرت</button>
+      <button class="f-btn" data-filter="suv">شاسی‌بلند</button>
+      <button class="f-btn" data-filter="sedan">سدان</button>
+      <button class="f-btn" data-filter="classic">کلاسیک</button>
+    </div>
+
+    <div class="cars" id="cars"></div>
+  </div>
+</section>
+
+<!-- why us -->
+<section id="why" class="experts-wrap">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-tag">Why Shatab</span>
+        <h2>چرا <span class="grad">شتاب</span> را انتخاب می‌کنید؟</h2>
+      </div>
+      <p>تعهد ما، شفافیت و آرامش خاطر شما در تمام مراحل خرید است؛ از کارشناسی فنی تا نقل و انتقال.</p>
+    </div>
+    <div class="feats">
+      <div class="feat reveal">
+        <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path stroke-linecap="round" d="M9 12l2 2 4-4"/></svg></div>
+        <h3>ضمانت اصالت و سلامت</h3>
+        <p>همه خودروها با مدارک معتبر و کارشناسی فنی کامل ارائه می‌شوند.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path stroke-linecap="round" d="M12 12v4m-2-2h4"/></svg></div>
+        <h3>کارشناسی تخصصی</h3>
+        <p>بدنه، موتور و اصالت خودرو توسط تیم فنی مجرب شتاب تأیید می‌شود.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 10h18M7 15h1m4 0h1m-7 4h8a3 3 0 003-3V8a3 3 0 00-3-3H7a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg></div>
+        <h3>تسویه اقساطی و لیزینگ</h3>
+        <p>با مشاوره رایگان، بهترین گزینه پرداخت متناسب با شرایط شما را انتخاب کنید.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ico"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/></svg></div>
+        <h3>بازدید حضوری رایگان</h3>
+        <p>در محل نمایشگاه، خودرو را از نزدیک ببینید و با خیال راحت تست کنید.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- experts -->
+<section id="experts">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-tag">Our Experts</span>
+        <h2>با <span class="grad">کارشناسان</span> شتاب آشنا شوید</h2>
+      </div>
+      <p>تیم کارشناسی شتاب در کنار شماست تا بهترین و به‌صرفه‌ترین انتخاب را داشته باشید. با یک تماس، مشاوره تخصصی و رایگان بگیرید.</p>
+    </div>
+    <div class="exp-grid" id="expertsGrid"></div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<div class="container">
+  <div class="cta-band reveal" id="contact">
+    <h2>استعلام قیمت <span class="grad">رایگان</span> و فوری</h2>
+    <p>کافیست تماس بگیرید؛ کارشناسان شتاب قیمت به‌روز خودروی موردنظر شما را به‌صورت حضوری یا تلفنی اعلام می‌کنند.</p>
+    <div class="cta-actions">
+      <a href="tel:+982143560000" class="phone-big">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h3c.7 0 1.3.5 1.5 1.2l.8 3a1.6 1.6 0 01-.4 1.5l-1.4 1.4a13 13 0 005.9 5.9l1.4-1.4c.4-.4.9-.5 1.5-.4l3 .8c.7.2 1.2.8 1.2 1.5v3c0 .8-.7 1.5-1.5 1.5A17 17 0 013 5.5z"/></svg>
+        ۰۲۱-۴۳۵۶۰
+      </a>
+      <a href="tel:+982143560000" class="btn btn-primary" style="padding:16px 30px">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h3c.7 0 1.3.5 1.5 1.2l.8 3a1.6 1.6 0 01-.4 1.5l-1.4 1.4a13 13 0 005.9 5.9l1.4-1.4c.4-.4.9-.5 1.5-.4l3 .8c.7.2 1.2.8 1.2 1.5v3c0 .8-.7 1.5-1.5 1.5A17 17 0 013 5.5z"/></svg>
+        تماس با کارشناس
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:16px">
+          <span class="badge"><span class="fa">ش</span></span>
+          <span>شتاب<small>نمایشگاه اتومبیل</small></span>
+        </a>
+        <p style="color:var(--ink-dim);font-size:.9rem;max-width:300px;margin-top:14px">نمایشگاه تخصصی خودرو با بیش از دو دهه تجربه؛ جایی که می‌توانید با خیال راحت ببینید، مقایسه کنید و انتخاب کنید.</p>
+      </div>
+      <div>
+        <h4>دسترسی سریع</h4>
+        <ul>
+          <li><a href="#top">خانه</a></li>
+          <li><a href="#showroom">نمایشگاه</a></li>
+          <li><a href="#experts">کارشناسان</a></li>
+          <li><a href="#why">چرا شتاب</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خودروها</h4>
+        <ul>
+          <li><a href="#showroom">اسپرت</a></li>
+          <li><a href="#showroom">شاسی‌بلند</a></li>
+          <li><a href="#showroom">سدان</a></li>
+          <li><a href="#showroom">کلاسیک</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>اطلاعات تماس</h4>
+        <ul class="foot-contact">
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+           اصفهان ، خیابان مسجد سید ، روبروی خدمات شهرداری ، اتوگالری شتاب
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h3c.7 0 1.3.5 1.5 1.2l.8 3a1.6 1.6 0 01-.4 1.5l-1.4 1.4a13 13 0 005.9 5.9l1.4-1.4c.4-.4.9-.5 1.5-.4l3 .8c.7.2 1.2.8 1.2 1.5v3c0 .8-.7 1.5-1.5 1.5A17 17 0 013 5.5z"/></svg>
+            <span dir="ltr">021-4356 0000</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
+            شنبه تا پنجشنبه ۹ تا ۲۱
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© ۱۴۰۳ نمایشگاه اتومبیل شتاب — تمامی حقوق محفوظ است.</span>
+      <span class="made">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ember)" stroke-width="2"><path stroke-linecap="round" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        ساخته‌شده با سرعت
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-back" data-close></div>
+  <div class="modal-box">
+    <div class="modal-img" id="modalImg"></div>
+    <button class="modal-close" data-close aria-label="بستن">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="modal-body">
+      <div class="modal-title">
+        <h3 id="modalTitle"></h3>
+        <span class="car-year" id="modalYear"></span>
+      </div>
+      <ul class="spec-grid" id="modalSpecs"></ul>
+      <div class="modal-note">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6 2A8.6 8.6 0 1111 3.4 8.6 8.6 0 0119.6 12z"/></svg>
+        <span>قیمت روز این خودرو به‌صورت آنلاین نمایش داده نمی‌شود. برای استعلام قیمت دقیق و لحظه‌ای، با کارشناس مسئول تماس بگیرید.</span>
+      </div>
+      <div class="modal-actions">
+        <a href="tel:+982143560000" class="btn-inq">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h3c.7 0 1.3.5 1.5 1.2l.8 3a1.6 1.6 0 01-.4 1.5l-1.4 1.4a13 13 0 005.9 5.9l1.4-1.4c.4-.4.9-.5 1.5-.4l3 .8c.7.2 1.2.8 1.2 1.5v3c0 .8-.7 1.5-1.5 1.5A17 17 0 013 5.5z"/></svg>
+          استعلام قیمت
+        </a>
+        <button class="btn-detail" data-close>بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- back to top -->
+<button class="to-top" id="toTop" aria-label="بازگشت به بالا">
+  <svg fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m-6 6l6-6 6 6"/></svg>
+</button>
+
+<script>
+(function(){
+  var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var TEL = 'tel:+982143560000';
+
+  var CATS = { sport:'اسپرت', suv:'شاسی\u200cبلند', sedan:'سدان', classic:'کلاسیک' };
+
+  var CARS = [
+    { id:'shata-gt', name:'شتاب GT', tagline:'پرچم‌دار اسپرت‌های نمایشگاه', cat:'sport', svg:'car-sport', year:'۱۴۰۳', status:'نو',
+      specs:{ power:'۵۱۰ اسب‌بخار', acc:'۳.۱ ثانیه', fuel:'بنزین ۸ سیلندر', trans:'دوکلاچه اتوماتیک', drive:'دیفرانسیل عقب', seats:'۲ نفره' } },
+    { id:'lotus-s', name:'لوتوس S', tagline:'اسپرت شهری با هندلینگ خارق‌العاده', cat:'sport', svg:'car-sport', year:'۱۴۰۲', status:'کارکرده',
+      specs:{ power:'۴۲۰ اسب‌بخار', acc:'۴.۲ ثانیه', fuel:'بنزین', trans:'دوکلاچه اتوماتیک', drive:'دیفرانسیل عقب', seats:'۲ نفره' } },
+    { id:'ariyo', name:'آریو', tagline:'سدان هیبریدی کم‌مصرف و مدرن', cat:'sedan', svg:'car-sedan', year:'۱۴۰۳', status:'نو',
+      specs:{ power:'۲۵۰ اسب‌بخار', acc:'۶.۸ ثانیه', fuel:'هیبرید', trans:'اتوماتیک CVT', drive:'دیفرانسیل جلو', seats:'۵ نفره' } },
+    { id:'sedro', name:'سِدرو', tagline:'سدان شهری مطمئن و اقتصادی', cat:'sedan', svg:'car-sedan', year:'۱۴۰۱', status:'کارکرده',
+      specs:{ power:'۲۱۰ اسب‌بخار', acc:'۷.۴ ثانیه', fuel:'بنزین', trans:'اتوماتیک', drive:'دیفرانسیل جلو', seats:'۵ نفره' } },
+    { id:'pershia', name:'پرشیا لوکس', tagline:'لوکس، آرام و مناسب خانواده', cat:'sedan', svg:'car-sedan', year:'۱۴۰۳', status:'نو',
+      specs:{ power:'۳۲۰ اسب‌بخار', acc:'۵.۹ ثانیه', fuel:'بنزین', trans:'اتوماتیک', drive:'دیفرانسیل جلو', seats:'۵ نفره' } },
+    { id:'arsi', name:'آرسی', tagline:'شاسی‌بلند هفت‌نفره پریمیوم', cat:'suv', svg:'car-suv', year:'۱۴۰۲', status:'نو',
+      specs:{ power:'۳۶۰ اسب‌بخار', acc:'۵.۴ ثانیه', fuel:'هیبرید', trans:'اتوماتیک', drive:'چهارچرخ', seats:'۷ نفره' } },
+    { id:'dena', name:'دنا ۴', tagline:'شاسی‌بلند دیزلی قدرتمند', cat:'suv', svg:'car-suv', year:'۱۴۰۰', status:'کارکرده',
+      specs:{ power:'۲۹۰ اسب‌بخار', acc:'۶.۲ ثانیه', fuel:'دیزل', trans:'اتوماتیک', drive:'چهارچرخ', seats:'۵ نفره' } },
+    { id:'classic-87', name:'کلاسیک ۸۷', tagline:'یادگار خاطره‌انگیز دهه شصت', cat:'classic', svg:'car-classic', year:'۱۳۸۷', status:'موزه‌ای',
+      specs:{ power:'۱۸۰ اسب‌بخار', acc:'۹.۵ ثانیه', fuel:'بنزین', trans:'دستی', drive:'دیفرانسیل عقب', seats:'۵ نفره' } }
+  ];
+
+  var EXPERTS = [
+    { name:'بهنام معلمی نیا', role:'کارشناس ارشد قیمت\u200cگذاری', exp:'۱۵ سال سابقه', rate:'۴.۹', phone:'09121001001',
+      note:'مسئول اعلام قیمت روز و شرایط فروش' },
+    { name:'بابک معلمی نیا ', role:'کارشناس فنی و بدنه', exp:'۱۲ سال سابقه', rate:'۴.۸', phone:'09121001002',
+      note:'کارشناسی سلامت فنی و اصالت خودرو' },
+    { name:'حسن صادقی', role:'مشاور فروش و لیزینگ', exp:'۱۰ سال سابقه', rate:'۴.۷', phone:'09121001003',
+      note:'مشاوره شرایط اقساط و لیزینگ' },
+    { name:'امین ذکاوتمند', role:'کارشناس نقل و انتقال', exp:'۸ سال سابقه', rate:'۴.۹', phone:'09121001004',
+      note:'هماهنگی مدارک، بیمه و انتقال سند' }
+  ];
+
+  var ICONS = {
+    power:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>',
+    acc:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path stroke-linecap="round" d="M12 13V7m-3 3l3-3 3 3"/></svg>',
+    fuel:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 22V6a2 2 0 012-2h6a2 2 0 012 2v16M3 22h10M7 8h4M7 12h4"/><path stroke-linecap="round" d="M15 8h1a2 2 0 012 2v6a1.5 1.5 0 003 0v-5a2 2 0 00-2-2h-2"/></svg>',
+    trans:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path stroke-linecap="round" d="M8.4 6h7.2M8.4 18h7.2M6 8.4v7.2M18 8.4v7.2"/></svg>',
+    drive:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path stroke-linecap="round" d="M12 3v7m2.8 2.2L21 6"/></svg>',
+    seats:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M5 12v8m14-8v8M5 12a3 3 0 013-3h8a3 3 0 013 3M5 12v-3M19 12v-3"/></svg>',
+    phone:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.5C3 4.7 3.7 4 4.5 4h3c.7 0 1.3.5 1.5 1.2l.8 3a1.6 1.6 0 01-.4 1.5l-1.4 1.4a13 13 0 005.9 5.9l1.4-1.4c.4-.4.9-.5 1.5-.4l3 .8c.7.2 1.2.8 1.2 1.5v3c0 .8-.7 1.5-1.5 1.5A17 17 0 013 5.5z"/></svg>',
+    star:'<svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7L12 2z"/></svg>',
+    check:'<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6 2A8.6 8.6 0 1111 3.4 8.6 8.6 0 0119.6 12z"/></svg>'
+  };
+
+  function specIcon(key){ return ICONS[key] || ''; }
+
+  function carSvg(name, gradId){
+    var g1 = gradId + 'a';
+    var g2 = gradId + 'b';
+    var defs = '<defs>' +
+      '<linearGradient id="'+g1+'" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0" stop-color="#ffcf5c"/><stop offset=".45" stop-color="#ff9a2e"/><stop offset="1" stop-color="#c93a10"/>' +
+      '</linearGradient>' +
+      '<linearGradient id="'+g2+'" x1="0" y1="0" x2="1" y2="0">' +
+      '<stop offset="0" stop-color="#ffb020"/><stop offset="1" stop-color="#fff3d6"/>' +
+      '</linearGradient></defs>';
+    var inner = document.querySelector('#'+name).innerHTML;
+    inner = inner.replace(/#gradA/g,'#'+g1).replace(/#gradB/g,'#'+g2);
+    return '<svg viewBox="0 0 440 170" aria-hidden="true">'+defs+inner+'</svg>';
+  }
+
+  function renderCars(list){
+    var grid = document.getElementById('cars');
+    grid.innerHTML = list.map(function(c, i){
+      var s = c.specs;
+      return '<article class="car reveal" data-id="'+c.id+'" style="transition-delay:'+(i*60)+'ms">'+
+        '<div class="car-img">'+carSvg(c.svg, 'g'+c.id)+
+          '<span class="car-badge">'+CATS[c.cat]+'</span>'+
+          '<span class="car-tag">'+c.status+'</span>'+
+          '<button class="car-overlay" data-open="'+c.id+'" aria-label="مشاهده مشخصات کامل '+c.name+'">'+
+            '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.6"/></svg>'+
+            'مشاهده مشخصات کامل'+
+          '</button>'+
+        '</div>'+
+        '<div class="car-body">'+
+          '<div class="car-name"><span>'+c.name+'</span><span class="car-year">'+c.year+'</span></div>'+
+          '<div class="car-sub">'+c.tagline+'</div>'+
+          '<ul class="car-specs">'+
+            '<li>'+specIcon('power')+'<span>قدرت <b>'+s.power+'</b></span></li>'+
+            '<li>'+specIcon('acc')+'<span>۰-۱۰۰ <b>'+s.acc+'</b></span></li>'+
+            '<li>'+specIcon('fuel')+'<span>سوخت <b>'+s.fuel+'</b></span></li>'+
+            '<li>'+specIcon('trans')+'<span>گیربکس <b>'+s.trans+'</b></span></li>'+
+          '</ul>'+
+          '<div class="car-actions">'+
+            '<a href="'+TEL+'" class="btn-inq">'+ICONS.phone+'استعلام قیمت</a>'+
+            '<button class="btn-detail" data-open="'+c.id+'">جزئیات</button>'+
+          '</div>'+
+        '</div>'+
+      '</article>';
+    }).join('');
+    observeReveals();
+  }
+
+  // filters
+  document.getElementById('filters').addEventListener('click', function(e){
+    var btn = e.target.closest('.f-btn');
+    if(!btn) return;
+    document.querySelectorAll('.f-btn').forEach(function(b){ b.classList.remove('on'); });
+    btn.classList.add('on');
+    var f = btn.getAttribute('data-filter');
+    renderCars(f === 'all' ? CARS : CARS.filter(function(c){ return c.cat === f; }));
+  });
+
+  // experts
+  document.getElementById('expertsGrid').innerHTML = EXPERTS.map(function(x, i){
+    return '<article class="exp reveal" style="transition-delay:'+(i*70)+'ms">'+
+      '<div class="exp-ava"><div class="inner">'+x.name.replace('مهندس ','').charAt(0)+'</div><span class="online"></span></div>'+
+      '<h3>'+x.name+'</h3>'+
+      '<div class="role">'+x.role+'</div>'+
+      '<div class="exp-meta">'+
+        '<span>'+ICONS.check+x.exp+'</span>'+
+        '<span>'+ICONS.star+'<b style="color:var(--amber)">'+x.rate+'</b></span>'+
+      '</div>'+
+      '<p style="color:var(--ink-soft);font-size:.82rem;margin-bottom:18px">'+x.note+'</p>'+
+      '<a href="tel:'+x.phone+'" class="btn btn-primary">'+ICONS.phone+'تماس با کارشناس</a>'+
+    '</article>';
+  }).join('');
+
+  // modal
+  var modal = document.getElementById('modal');
+  function openModal(id){
+    var c = CARS.filter(function(x){ return x.id === id; })[0];
+    if(!c) return;
+    var s = c.specs;
+    document.getElementById('modalImg').innerHTML = carSvg(c.svg, 'gmodal'+c.id);
+    document.getElementById('modalTitle').textContent = c.name;
+    document.getElementById('modalYear').textContent = c.year;
+    var rows = [
+      ['قدرت موتور', s.power, 'power'],
+      ['شتاب ۰ تا ۱۰۰', s.acc, 'acc'],
+      ['نوع سوخت', s.fuel, 'fuel'],
+      ['گیربکس', s.trans, 'trans'],
+      ['سیستم محرک', s.drive, 'drive'],
+      ['ظرفیت', s.seats, 'seats']
+    ];
+    document.getElementById('modalSpecs').innerHTML = rows.map(function(r){
+      return '<li>'+specIcon(r[2])+'<div><b>'+r[0]+'</b>'+r[1]+'</div></li>';
+    }).join('');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('click', function(e){
+    var opener = e.target.closest('[data-open]');
+    if(opener){ openModal(opener.getAttribute('data-open')); }
+    if(e.target.closest('[data-close]')){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  // header scroll
+  var header = document.getElementById('header');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var y = window.scrollY;
+    header.classList.toggle('scrolled', y > 20);
+    toTop.classList.toggle('show', y > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior: REDUCED ? 'auto' : 'smooth'}); });
+
+  // active nav
+  var links = document.querySelectorAll('.nav-links a');
+  var sections = ['top','showroom','experts','why','contact'].map(function(id){ return document.getElementById(id); });
+  var spy = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+en.target.id); });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) spy.observe(s); });
+
+  // burger
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function(){ navLinks.classList.toggle('open'); });
+  navLinks.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') navLinks.classList.remove('open');
+  });
+
+  // reveal observer
+  var revealObs = null;
+  function observeReveals(){
+    if(revealObs) revealObs.disconnect();
+    revealObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); revealObs.unobserve(en.target); }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal:not(.in)').forEach(function(el){ revealObs.observe(el); });
+  }
+
+  // speed lines
+  var wrap = document.getElementById('speedLines');
+  if(!REDUCED && wrap){
+    var n = 9;
+    for(var i=0;i<n;i++){
+      var l = document.createElement('i');
+      var top = 8 + Math.random()*84;
+      var w = 60 + Math.random()*220;
+      l.style.top = top+'%';
+      l.style.right = (-20 - Math.random()*60)+'%';
+      l.style.width = w+'px';
+      l.style.animation = 'floatx '+(4+Math.random()*4)+'s linear infinite';
+      l.style.animationDelay = (-Math.random()*6)+'s';
+      wrap.appendChild(l);
+    }
+  }
+  var css = document.createElement('style');
+  css.textContent = '@keyframes floatx{to{transform:translateX(-130vw)}}';
+  document.head.appendChild(css);
+
+  renderCars(CARS);
+  observeReveals();
+})();
+</script>
+</body>
+</html>
